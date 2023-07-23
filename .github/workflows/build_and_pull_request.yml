@@ -31,6 +31,9 @@ jobs:
         git add -f dist
         git commit -m "Update 'dist' folder"
         git push origin dist-update
+        pull-requests: write
+        issues: write
+        repository-projects: write
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
