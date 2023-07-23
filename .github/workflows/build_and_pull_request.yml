@@ -39,6 +39,4 @@ jobs:
         branch: dist-update
         title: 'Update dist folder'
         body: 'This is an automated pull request to update the dist folder.'
-        pull-requests: write
-        issues: write
-        repository-projects: write
+        base: master  # Set the base branch for the pull request here
