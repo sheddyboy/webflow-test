@@ -2,11 +2,11 @@ name: Build and Create Pull Request
 on:
   push:
     branches:
-      - main  # Adjust this to match your default branch if it's different
+      - master  
 
 jobs:
   build_and_pr:
-    runs-on: ubuntu-latest  # You can also use other operating systems if needed
+    runs-on: ubuntu-latest  
 
     steps:
     - name: Checkout code
@@ -18,10 +18,10 @@ jobs:
         node-version: 14  # Adjust this version according to your project's requirements
 
     - name: Install dependencies
-      run: npm install  # Or use yarn if you prefer
+      run: npm install
 
     - name: Build
-      run: npm run build  # Replace this with your actual build command
+      run: npm run build  
 
     - name: Commit and push the 'dist' folder
       run: |
