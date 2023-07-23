@@ -2,7 +2,7 @@ name: Build and Create Pull Request
 on:
   push:
     branches:
-      - main  # Adjust this to match your default branch if it's different
+      - master  # Adjust this to match your default branch if it's different
 
 jobs:
   build_and_pr:
