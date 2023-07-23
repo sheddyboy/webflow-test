@@ -28,7 +28,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git checkout -b dist-update
-        git add dist
+        git add -f dist
         git commit -m "Update 'dist' folder"
         git push origin dist-update
 
