@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Install Node.js
         uses: actions/setup-node@v2
@@ -24,8 +26,10 @@ jobs:
       - name: Build code
         run: npm run build
 
-      - name: Archive artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
+      - name: Commit dist folder
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add dist
+          git commit -m "Add dist folder"
+          git push
