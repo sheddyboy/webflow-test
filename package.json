@@ -1,0 +1,17 @@
+{
+  "name": "webflow-ksl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "esbuild src/*.ts --bundle --minify --sourcemap --outdir=dist --watch",
+    "build": "esbuild src/*.ts --bundle --minify --sourcemap --outdir=dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.18.16"
+  }
+}
