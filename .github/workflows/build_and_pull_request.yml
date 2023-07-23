@@ -1,24 +1,25 @@
-name: Build and Create Pull Request
+name: Build
+
 on:
   push:
     branches:
-      - master  
+      - master  # Adjust this to match the branch you want to trigger the workflow on
 
 jobs:
-  build_and_pr:
-    runs-on: ubuntu-latest  
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14  # Adjust this version according to your project's requirements
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Adjust to the version you need for your project
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build
-      run: npm run build  
+      - name: Build with esbuild
+        run: npm run build  # This runs the "build" script from your package.json
