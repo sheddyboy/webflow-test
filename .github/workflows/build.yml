@@ -23,7 +23,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git branch master
         git add -f dist
         git commit -m "Update 'dist' folder"
         git push origin master
