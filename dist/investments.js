@@ -1,0 +1,2 @@
+"use strict";(()=>{window.addEventListener("DOMContentLoaded",function(){let t=window.localStorage.getItem("nav-to-investments");document.querySelectorAll("[nav-from-strategy]").forEach(e=>{t===e.getAttribute("nav-from-strategy")&&(document.querySelector("[strategy-category]")?.click(),e.click(),setTimeout(()=>{e.scrollIntoView({behavior:"smooth",block:"center",inline:"nearest"})},700),window.localStorage.removeItem("nav-to-investments"))})});})();
+//# sourceMappingURL=investments.js.map

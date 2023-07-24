@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/investments.ts"],
+  "sourcesContent": ["window.addEventListener(\"DOMContentLoaded\", function () {\n    //check if we are comming from strategy page\n    const fromStrategyPageLS = window.localStorage.getItem(\"nav-to-investments\");\n    document.querySelectorAll<HTMLDivElement>(\"[nav-from-strategy]\").forEach((item) => {\n      if (fromStrategyPageLS === item.getAttribute(\"nav-from-strategy\")) {\n        document.querySelector<HTMLDivElement>(\"[strategy-category]\")?.click();\n        item.click();\n        setTimeout(() => {\n          item.scrollIntoView({\n            behavior: \"smooth\", // Use smooth scrolling\n            block: \"center\", // Scroll to the center of the element\n            inline: \"nearest\", // Scroll to the nearest edge of the element\n          });\n        }, 700);\n        window.localStorage.removeItem(\"nav-to-investments\");\n      }\n    });\n  });\n  "],
+  "mappings": "mBAAA,OAAO,iBAAiB,mBAAoB,UAAY,CAEpD,IAAMA,EAAqB,OAAO,aAAa,QAAQ,oBAAoB,EAC3E,SAAS,iBAAiC,qBAAqB,EAAE,QAASC,GAAS,CAC7ED,IAAuBC,EAAK,aAAa,mBAAmB,IAC9D,SAAS,cAA8B,qBAAqB,GAAG,MAAM,EACrEA,EAAK,MAAM,EACX,WAAW,IAAM,CACfA,EAAK,eAAe,CAClB,SAAU,SACV,MAAO,SACP,OAAQ,SACV,CAAC,CACH,EAAG,GAAG,EACN,OAAO,aAAa,WAAW,oBAAoB,EAEvD,CAAC,CACH,CAAC",
+  "names": ["fromStrategyPageLS", "item"]
+}
